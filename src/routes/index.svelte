@@ -1,6 +1,6 @@
 <script>
   import Header from '$lib/Header.svelte'
-  import {signup, login, logout} from '../database'
+  import { signup, login, logout } from '../database'
   import { user } from '../stores'
 </script>
 

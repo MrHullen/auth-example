@@ -49,6 +49,7 @@ export async function signup() {
         email: loginData.user.email
     })
 
+    console.log(`Signup complete.`)
 }
 
 /* Login
@@ -69,7 +70,7 @@ export async function login(nextPage = undefined) {
     console.log(`Getting user info from database...`)
     let userRef = await db.collection('users').doc(loginData.user.uid).get()
     
-    if (userRef.exists()) {
+    if (userRef.exists) {
         let userData = userRef.data()
 
         console.log(`User found, updating local user store...`)
@@ -78,9 +79,8 @@ export async function login(nextPage = undefined) {
             ...userData
         })
     } else {
-        console.log(`ERROR: user not found...`)
+        console.error(`LOGIN ERROR: user not found...`)
     }
-    
 
     console.log(`Login complete.`)
 }
