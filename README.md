@@ -4,7 +4,19 @@ There are three files that have been modified from the template to showcase auth
 
 *Note: this example uses Google authentication because it's easiest with Firebase.*
 
-## database.js
+## 1) index.svelte
+
+The main page contains basic code for connecting buttons to functions and inputs to variables.
+
+## 2) stores.js
+
+This file is for the 'store' variables that can be used on any page in the app.
+
+It imports the stores from Svelte and then create a `user` store as an object with two fields: `uid` and `email`.
+
+*Creating these fields at the start helps display them nicer when they're empty.*
+
+## 3) database.js
 
 ### Setup 
 
@@ -53,17 +65,3 @@ The second and last step is to reset the `user` store.
 
 Sources:
  * [Signout](https://firebase.google.com/docs/auth/web/google-signin#next_steps)
-
-## stores.js
-
-This file is for the 'store' variables that can be used on any page in the app.
-
-It imports the stores from Svelte and then create a `user` store as an object with two fields: `uid` and `email`.
-
-*Creating these fields at the start helps display them nicer when they're empty.*
-
-
-
-## index.svelte
-
-The main page contains basic code for connecting buttons to functions and inputs to variables.
