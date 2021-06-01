@@ -18,9 +18,9 @@ It imports the stores from Svelte and then create a `user` store as an object wi
 
 ## 3) database.js
 
-### Setup 
-
 This file contains all of the logic for interacting with the database.
+
+### Setup section
 
 At the start, it imports all the Firebase products that the app uses, as well as the `user` store for keeping track of the user across different pages/components.
 
